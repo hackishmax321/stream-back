@@ -23,6 +23,7 @@ from pymongo import ReturnDocument
 
 app = FastAPI()
 origins = [
+    "https://stream-ui-9g0h.onrender.com",
     "http://localhost:3000",
     "http://localhost:3001"
 ]
