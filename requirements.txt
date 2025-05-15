@@ -6,6 +6,7 @@ tensorflow
 motor
 pymongo
 pydantic
+pydantic[email]
 bcrypt
 python-jose
 passlib
