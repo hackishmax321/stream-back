@@ -99,7 +99,7 @@ async def get_student_by_student_id(student_id: str):
 @app.post("/students", response_model=StudentResponseModel)
 async def create_student(student: StudentModel):
     # Check if student already exists by student_id or email
-    student_exists = await get_student_by_student_id(student.student_id) or await get_student_by_email(student.email)
+    student_exists = await get_student_by_email(student.email)
     if student_exists:
         raise HTTPException(status_code=400, detail="Student with this ID or email already exists")
     
